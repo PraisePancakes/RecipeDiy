@@ -19,11 +19,15 @@ const ProfilePictureComponent = ({ user }) => {
     try {
       const formData = new FormData();
       formData.append("image", file);
-      await axios.post("http://localhost:3001/uploadProfilePic", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await axios.post(
+        "https://recipediy.onrender.com/uploadProfilePic",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       alert("Profile picture uploaded successfully");
       window.location.reload();
     } catch (error) {
@@ -39,7 +43,7 @@ const ProfilePictureComponent = ({ user }) => {
         </h1>
         {user?.profileImgURL ? (
           <img
-            src={`http://localhost:3001/User_Mult_Images/${user?.profileImgURL}`}
+            src={`https://recipediy.onrender.com/User_Mult_Images/${user?.profileImgURL}`}
             className="border rounded-full lg:w-[8rem] lg:h-[8rem] xs:w-[4rem] xs:h-[4rem] object-cover"
             alt="Profile"
           ></img>

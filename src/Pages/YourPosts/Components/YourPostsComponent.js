@@ -12,9 +12,12 @@ const YourPostsComponent = () => {
     const getYourPosts = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get("http://localhost:3001/getYourPosts", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getYourPosts",
+          {
+            withCredentials: true,
+          }
+        );
         setYourPosts(response.data.posts);
         setIsLoading(false);
       } catch (error) {

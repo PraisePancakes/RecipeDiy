@@ -32,7 +32,9 @@ const UserFriendsComponent = ({ user }) => {
     const getAllUsers = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:3001/getAllUsers");
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getAllUsers"
+        );
         setUsers(response.data);
       } catch (error) {
         console.log(error);
@@ -52,7 +54,7 @@ const UserFriendsComponent = ({ user }) => {
   const removeFriends = async (friendId) => {
     try {
       await axios.patch(
-        `http://localhost:3001/removeFriends`,
+        `https://recipediy.onrender.com/removeFriends`,
         {
           friendId: friendId,
         },
@@ -107,7 +109,7 @@ const UserFriendsComponent = ({ user }) => {
                         >
                           {friend?.profileImgURL !== "" ? (
                             <img
-                              src={`http://localhost:3001/User_Mult_Images/${friend?.profileImgURL}`}
+                              src={`https://recipediy.onrender.com/User_Mult_Images/${friend?.profileImgURL}`}
                               className=" rounded-full w-[4rem] h-[4rem] object-cover"
                               alt="Profile "
                             />

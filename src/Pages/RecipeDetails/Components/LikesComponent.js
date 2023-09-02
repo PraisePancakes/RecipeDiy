@@ -9,7 +9,7 @@ const LikesComponent = ({ user, postId }) => {
     const getLikes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/getLikes/${postId}`
+          `https://recipediy.onrender.com/getLikes/${postId}`
         );
         setLiked(response.data.some((e) => e.user === user?._id));
         setLikeCount(response.data.length);
@@ -22,7 +22,7 @@ const LikesComponent = ({ user, postId }) => {
   }, [liked, postId, user?._id]);
   const handleLikePost = async () => {
     try {
-      await axios.patch(`http://localhost:3001/likePost/${postId}`);
+      await axios.patch(`https://recipediy.onrender.com/likePost/${postId}`);
       setLiked(!liked);
     } catch (error) {
       console.log(error);

@@ -23,7 +23,7 @@ const UsersInfoComponent = ({ otherUser, user }) => {
   const removeFriends = async (friendId) => {
     try {
       await axios.patch(
-        `http://localhost:3001/removeFriends`,
+        `https://recipediy.onrender.com/removeFriends`,
         {
           friendId: friendId,
         },

@@ -61,7 +61,7 @@ const UserFriendsComponent = ({ user, isLoading, friends }) => {
                     >
                       {friend?.profileImgURL !== "" ? (
                         <img
-                          src={`http://localhost:3001/User_Mult_Images/${friend?.profileImgURL}`}
+                          src={`https://recipediy.onrender.com/User_Mult_Images/${friend?.profileImgURL}`}
                           className=" rounded-full w-[4rem] h-[4rem] object-cover"
                           alt="Profile "
                         />

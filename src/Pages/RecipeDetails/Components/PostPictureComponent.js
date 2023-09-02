@@ -8,7 +8,7 @@ const PostPictureComponent = ({ post }) => {
     <div className="w-full flex justify-center">
       {" "}
       <img
-        src={`http://localhost:3001/Post_Mult_Images/${post.postImageURL}`}
+        src={`https://recipediy.onrender.com/Post_Mult_Images/${post.postImageURL}`}
         className=" w-[40rem] h-[40rem] object-cover"
         alt="Recipe"
       ></img>

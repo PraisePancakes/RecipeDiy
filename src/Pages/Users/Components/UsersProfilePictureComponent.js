@@ -9,7 +9,7 @@ const UsersProfilePictureComponent = ({ otherUser }) => {
       <Link to={`/user/${otherUser._id}`} key={otherUser._id}>
         {otherUser.profileImgURL !== "" ? (
           <img
-            src={`http://localhost:3001/User_Mult_Images/${otherUser.profileImgURL}`}
+            src={`https://recipediy.onrender.com/User_Mult_Images/${otherUser.profileImgURL}`}
             className="users-pfp border rounded-full w-[3rem] h-[3rem] object-cover"
             alt="Profile"
           ></img>

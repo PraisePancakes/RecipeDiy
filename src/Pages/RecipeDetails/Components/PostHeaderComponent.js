@@ -33,7 +33,7 @@ const PostHeaderComponent = ({ user, userInfo, post, postCount }) => {
           </Link>
           {userInfo?.profileImgURL !== "" ? (
             <img
-              src={`http://localhost:3001/User_Mult_Images/${userInfo?.profileImgURL}`}
+              src={`https://recipediy.onrender.com/User_Mult_Images/${userInfo?.profileImgURL}`}
               className="border rounded-full w-[4rem] h-[4rem] object-cover"
               alt="Profile"
             ></img>

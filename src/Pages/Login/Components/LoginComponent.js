@@ -14,7 +14,10 @@ const LoginComponent = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/login", form);
+      const response = await axios.post(
+        "https://recipediy.onrender.com/login",
+        form
+      );
       localStorage.setItem("user", response.data.user._id);
       setForm(DEFAULT_FORM);
       setError("");

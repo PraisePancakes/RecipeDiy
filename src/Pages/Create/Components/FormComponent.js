@@ -61,7 +61,7 @@ const FormComponent = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:3001/addPost",
+        "https://recipediy.onrender.com/addPost",
         formData
       );
       setForm(DEFAULT_FORM);

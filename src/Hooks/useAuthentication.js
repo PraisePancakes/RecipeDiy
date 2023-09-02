@@ -13,7 +13,9 @@ export function useAuthentication() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/getUser");
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getUser"
+        );
         console.log("Start " + Date.now());
         setUser(response.data?.user);
 

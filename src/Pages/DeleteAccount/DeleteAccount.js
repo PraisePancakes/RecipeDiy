@@ -12,7 +12,7 @@ const DeleteAccount = () => {
     e.preventDefault();
     try {
       const response = await axios.delete(
-        "http://localhost:3001/deleteAccount",
+        "https://recipediy.onrender.com/deleteAccount",
         { data: form }
       );
       console.log(response);

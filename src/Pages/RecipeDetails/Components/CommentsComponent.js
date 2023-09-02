@@ -11,7 +11,7 @@ const CommentsComponent = ({ user, postId }) => {
     const fetchPostComments = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/getComments/${postId}`
+          `https://recipediy.onrender.com/getComments/${postId}`
         );
         setPostComments(response.data);
       } catch (error) {
@@ -24,7 +24,7 @@ const CommentsComponent = ({ user, postId }) => {
   const handleAddComment = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:3001/addComment/${postId}`, {
+      await axios.patch(`https://recipediy.onrender.com/addComment/${postId}`, {
         comment,
       });
       const newComment = {
@@ -88,7 +88,7 @@ const CommentsComponent = ({ user, postId }) => {
                   {" "}
                   {comment.userDetails.profileImgURL ? (
                     <img
-                      src={`http://localhost:3001/User_Mult_Images/${comment.userDetails.profileImgURL}`}
+                      src={`https://recipediy.onrender.com/User_Mult_Images/${comment.userDetails.profileImgURL}`}
                       className="border rounded-full w-[3rem] h-[3rem] object-cover"
                       alt="Profile"
                     ></img>

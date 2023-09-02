@@ -15,7 +15,7 @@ export function useRefreshAccessToken(
     if (isAuthenticated) {
       const refreshAccessToken = async () => {
         try {
-          await axios.post("http://localhost:3001/refresh", user._id);
+          await axios.post("https://recipediy.onrender.com/refresh", user._id);
         } catch (error) {
           setIsAuthenticated(false);
           localStorage.removeItem("user");

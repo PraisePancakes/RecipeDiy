@@ -20,7 +20,7 @@ const ProfileInfoComponent = ({ user }) => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          "http://localhost:3001/getUserPostCount"
+          "https://recipediy.onrender.com/getUserPostCount"
         );
 
         setPostCount(response.data.postCount);
@@ -36,7 +36,7 @@ const ProfileInfoComponent = ({ user }) => {
   const handleUsernameEdit = async () => {
     try {
       const response = await axios.patch(
-        "http://localhost:3001/edit/editUsername",
+        "https://recipediy.onrender.com/edit/editUsername",
         { username }
       );
       alert(response.data.message);

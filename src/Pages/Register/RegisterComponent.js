@@ -15,7 +15,7 @@ export default function RegisterComponent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/register", form);
+      await axios.post("https://recipediy.onrender.com/register", form);
       setForm(DEFAULT_FORM);
       navigate("/");
     } catch (error) {

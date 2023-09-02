@@ -26,9 +26,12 @@ const PostsComponent = ({ user }) => {
     const getAllPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:3001/getAllPosts", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getAllPosts",
+          {
+            withCredentials: true,
+          }
+        );
         setAllPosts(response.data);
       } catch (error) {
         setError(error.response.data.message);
@@ -43,7 +46,7 @@ const PostsComponent = ({ user }) => {
     try {
       setIsLoading(true);
       const response = await axios.patch(
-        `http://localhost:3001/savePost/${postId}`
+        `https://recipediy.onrender.com/savePost/${postId}`
       );
       setSuccessMessage(response.data.message);
     } catch (error) {

@@ -15,7 +15,7 @@ const UserComponent = ({ user }) => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `http://localhost:3001/getOtherUser/${otherUserId}` // Use URL parameter
+          `https://recipediy.onrender.com/getOtherUser/${otherUserId}` // Use URL parameter
         );
         setOtherUser(response.data.otherUser);
         setFriends(response.data.friends);

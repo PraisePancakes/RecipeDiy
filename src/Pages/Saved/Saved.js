@@ -17,7 +17,9 @@ const Saved = ({ user }) => {
     const getSavedPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:3001/getSavedPosts");
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getSavedPosts"
+        );
         setPosts(response.data.savedPosts);
         console.log(response);
       } catch (error) {

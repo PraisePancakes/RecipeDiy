@@ -17,9 +17,12 @@ const FindRecipes = ({ user }) => {
     const getAllPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:3001/getAllPosts", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getAllPosts",
+          {
+            withCredentials: true,
+          }
+        );
         setAllPosts(response.data);
       } catch (error) {
         setError(error.response.data.message);

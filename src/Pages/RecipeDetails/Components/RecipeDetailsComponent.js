@@ -49,7 +49,7 @@ const RecipeComponent = ({ user }) => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `http://localhost:3001/getUserPost/recipe/${postId}`
+          `https://recipediy.onrender.com/getUserPost/recipe/${postId}`
         );
         setPost(response.data.post);
         setUserInfo(response.data.user);
@@ -68,7 +68,7 @@ const RecipeComponent = ({ user }) => {
     try {
       setIsLoading(true);
       const response = await axios.patch(
-        `http://localhost:3001/savePost/${postId}`
+        `https://recipediy.onrender.com/savePost/${postId}`
       );
       setSuccessMessage(response.data.message);
     } catch (error) {

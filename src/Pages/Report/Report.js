@@ -38,7 +38,7 @@ const Report = () => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3001/report/${postId}`,
+        `https://recipediy.onrender.com/report/${postId}`,
         form
       );
       setSuccessMessage(response.data.message);

@@ -14,7 +14,9 @@ const UsersComponent = ({ user }) => {
     const getAllUsers = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get("http://localhost:3001/getAllUsers");
+        const response = await axios.get(
+          "https://recipediy.onrender.com/getAllUsers"
+        );
         setUsers(response.data);
       } catch (error) {
         setError(error.response.data.message);

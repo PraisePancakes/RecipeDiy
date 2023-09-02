@@ -5,7 +5,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 const DeletePostComponent = ({ postId }) => {
   const handlePostDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/deletePost/${postId}`);
+      await axios.delete(`https://recipediy.onrender.com/deletePost/${postId}`);
       window.location.reload();
     } catch (error) {
       console.log(error);

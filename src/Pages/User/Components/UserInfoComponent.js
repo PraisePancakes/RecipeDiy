@@ -11,7 +11,7 @@ const UserInfoComponent = ({ otherUser }) => {
     const getOtherUserPostCount = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/getOtherUserPostCount/${otherUser?._id}`
+          `https://recipediy.onrender.com/getOtherUserPostCount/${otherUser?._id}`
         );
 
         setPostCount(response.data.postCount);
@@ -32,7 +32,7 @@ const UserInfoComponent = ({ otherUser }) => {
           </h1>
           {otherUser?.profileImgURL !== "" ? (
             <img
-              src={`http://localhost:3001/User_Mult_Images/${otherUser?.profileImgURL}`}
+              src={`https://recipediy.onrender.com/User_Mult_Images/${otherUser?.profileImgURL}`}
               className="user-pfp border rounded-full w-[8rem] h-[8rem] object-cover"
               alt="Profile"
             ></img>

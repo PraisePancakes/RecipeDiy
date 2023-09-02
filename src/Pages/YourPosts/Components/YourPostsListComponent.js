@@ -30,7 +30,7 @@ const YourPostsListComponent = ({ yourPosts }) => {
                 {post?.difficulty}
               </h1>
               <img
-                src={`http://localhost:3001/Post_Mult_Images/${post.postImageURL}`}
+                src={`https://recipediy.onrender.com/Post_Mult_Images/${post.postImageURL}`}
                 className="w-[30rem] h-[30rem] rounded-md object-cover"
                 alt="post"
               ></img>
