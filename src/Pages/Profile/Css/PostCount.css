@@ -1,0 +1,68 @@
+@keyframes legendaryShining {
+  0% {
+    background-color: rgb(214, 182, 0);
+  }
+  50% {
+    background-color: #ffd700;
+    filter: brightness(135%);
+  }
+  100% {
+    background-color: rgb(134, 121, 3);
+  }
+}
+
+/* Apply the animation to the element with cubic-bezier timing function */
+#legendary-tier-status-profile {
+  background: linear-gradient(45deg, #000000, #7a630e, #5a5017);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.5) inset;
+  color: #face55;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-color: rgb(255, 230, 0);
+  animation: legendaryShining 6s infinite cubic-bezier(0.7, 0, 0.8, 1);
+}
+
+#base-status-profile {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#first-tier-status-profile {
+  background: linear-gradient(45deg, #cd7f32, #7a630e, #5a5017);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(194, 143, 4);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#second-tier-status-profile {
+  background: linear-gradient(
+    45deg,
+    #eaeaea,
+    #b0b0b0,
+    #eaeaea
+  ); /* Silver color gradient */
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #757575;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#third-tier-status-profile {
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #e5b200,
+    #ffd700
+  ); /* Gold color gradient */
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a08505;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
