@@ -34,6 +34,9 @@ function App() {
   //TO-DO
   //ready for first publish
 
+  //BUG FIXES
+  //MAJOR : INSTANT LOG-OUT DUE TO AUTH , ASAP FIX
+
   const location = useLocation();
 
   const resetScroll = () => {

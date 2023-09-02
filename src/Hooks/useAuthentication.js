@@ -21,7 +21,6 @@ export function useAuthentication() {
 
         console.log(response);
       } catch (error) {
-        alert("Unauthorized Token, must login again");
         localStorage.removeItem("user");
         setIsAuthenticated(false);
       }
