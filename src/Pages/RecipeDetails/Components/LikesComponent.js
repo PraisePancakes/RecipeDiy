@@ -19,7 +19,7 @@ const LikesComponent = ({ user, postId }) => {
     };
 
     getLikes();
-  }, [liked]);
+  }, [liked, postId, user?._id]);
   const handleLikePost = async () => {
     try {
       await axios.patch(`http://localhost:3001/likePost/${postId}`);

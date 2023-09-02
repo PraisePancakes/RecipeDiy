@@ -7,18 +7,17 @@ const CommentsComponent = ({ user, postId }) => {
   const [comment, setComment] = useState("");
   const [postComments, setPostComments] = useState([]);
 
-  const fetchPostComments = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3001/getComments/${postId}`
-      );
-      setPostComments(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchPostComments = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3001/getComments/${postId}`
+        );
+        setPostComments(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchPostComments();
   }, [postId]);
 

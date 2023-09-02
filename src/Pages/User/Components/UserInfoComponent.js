@@ -25,6 +25,7 @@ const UserInfoComponent = ({ otherUser }) => {
   return (
     <div>
       <section className="user-page-skeleton flex flex-col items-start text-3xl font-thin  gap-5">
+        {error && <h1>{error}</h1>}
         <div className="user-id-flex-items flex items-center gap-5">
           <h1 className="user-header font-thin text-5xl">
             @{otherUser?.username}
