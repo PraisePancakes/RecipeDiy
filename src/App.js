@@ -1,12 +1,12 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import NavbarComponent from "./GL_Components/NavbarComponent";
 import { Footer } from "./GL_Components/Footer";
 import Subscribe from "./GL_Components/Subscribe";
 import Copyright from "./GL_Components/Copyright";
-import { useAuthentication } from "./Hooks/useAuthentication";
+
 import {
   Create,
   Home,
@@ -29,19 +29,38 @@ import {
 
 axios.defaults.withCredentials = true;
 function App() {
-  const { isAuthenticated, user, handleLogout } = useAuthentication();
-
-  //TO-DO
-  //ready for first publish
-
-  //BUG FIXES
-  //MAJOR : INSTANT LOG-OUT DUE TO AUTH , ASAP FIX
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem("loggedIn")
+  );
 
   const location = useLocation();
 
   const resetScroll = () => {
     window.scrollTo(0, 0);
   };
+  const logout = () => {
+    setUser(null);
+    setIsAuthenticated(false);
+    localStorage.removeItem("loggedIn");
+  };
+  useEffect(() => {
+    if (isAuthenticated) {
+      const getUser = async () => {
+        try {
+          const response = await axios.get(
+            "https://recipediy.onrender.com/getUser"
+          );
+          setUser(response.data.user);
+        } catch (error) {
+          setIsAuthenticated(false);
+          setUser(null);
+        }
+      };
+
+      getUser();
+    }
+  }, [location.pathname, isAuthenticated]);
 
   useEffect(() => {
     resetScroll();
@@ -50,10 +69,7 @@ function App() {
   return (
     <div className="App">
       <div className="max-w-full">
-        <NavbarComponent
-          isAuthenticated={isAuthenticated}
-          handleLogout={handleLogout}
-        />
+        <NavbarComponent isAuthenticated={isAuthenticated} logout={logout} />
         <div>
           <Routes className="GLOBAL_CMPT_CONT overflow-hidden mx-10 max-w-full mt-[3rem]">
             <Route

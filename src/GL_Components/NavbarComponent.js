@@ -7,7 +7,7 @@ import { SiCodechef } from "react-icons/si";
 import { useLocation } from "react-router-dom";
 import MQueryReactNavComponent from "./MQueryReactNavComponent";
 
-const NavbarComponent = ({ isAuthenticated, handleLogout }) => {
+const NavbarComponent = ({ isAuthenticated, logout }) => {
   const navLinks = [
     {
       title: "Your Recipes",
@@ -124,7 +124,7 @@ const NavbarComponent = ({ isAuthenticated, handleLogout }) => {
                 <SiCodechef alt="Chef outline" size={30} />
                 View Profile
               </Link>{" "}
-              <button onClick={() => handleLogout()}>LOG OUT</button>
+              <button onClick={() => logout()}>LOG OUT</button>
             </section>
           )}
 
@@ -150,7 +150,7 @@ const NavbarComponent = ({ isAuthenticated, handleLogout }) => {
           >
             {isAuthenticated ? (
               <MQueryReactNavComponent
-                handleLogout={handleLogout}
+                logout={logout}
                 navLinks={navLinks}
                 isMenuOpen={isMenuOpen}
               />

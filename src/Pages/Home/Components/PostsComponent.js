@@ -114,7 +114,7 @@ const PostsComponent = ({ user }) => {
                       >
                         {post.author?.profileImgURL ? (
                           <img
-                            src={`http://localhost:3001/User_Mult_Images/${post.author?.profileImgURL}`}
+                            src={`https://recipediy.onrender.com/User_Mult_Images/${post.author?.profileImgURL}`}
                             className="border rounded-full w-[3rem] h-[3rem] object-cover"
                             alt="Profile"
                           ></img>
@@ -200,7 +200,7 @@ const PostsComponent = ({ user }) => {
                           {post?.difficulty}
                         </h1>
                         <img
-                          src={`http://localhost:3001/Post_Mult_Images/${post?.postImageURL}`}
+                          src={`https://recipediy.onrender.com/Post_Mult_Images/${post?.postImageURL}`}
                           className="w-[30rem] h-[30rem] rounded-md object-cover"
                           alt="post"
                         ></img>

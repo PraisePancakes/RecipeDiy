@@ -18,9 +18,12 @@ const LoginComponent = () => {
         "https://recipediy.onrender.com/login",
         form
       );
-      localStorage.setItem("user", response.data.user._id);
+      console.log(response);
+      localStorage.setItem("loggedIn", true);
+
       setForm(DEFAULT_FORM);
       setError("");
+
       window.location.reload();
     } catch (error) {
       setError(error.response.data.message);

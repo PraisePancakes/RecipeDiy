@@ -8,7 +8,7 @@ const UsersInfoComponent = ({ otherUser, user }) => {
   const addFriends = async (friendId) => {
     try {
       await axios.patch(
-        `http://localhost:3001/addFriends`,
+        `https://recipediy.onrender.com/addFriends`,
         {
           friendId: friendId,
         },

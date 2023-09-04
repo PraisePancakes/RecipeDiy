@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { SiCodechef } from "react-icons/si";
 
-function MQueryReactNavComponent({ handleLogout, navLinks, isMenuOpen }) {
+function MQueryReactNavComponent({ logout, navLinks, isMenuOpen }) {
   return (
     <section>
       {isMenuOpen ? (
@@ -28,7 +28,7 @@ function MQueryReactNavComponent({ handleLogout, navLinks, isMenuOpen }) {
               <SiCodechef alt="Chef outline" size={30} />
               View Profile
             </Link>{" "}
-            <button onClick={() => handleLogout()}>LOG OUT</button>
+            <button onClick={() => logout()}>LOG OUT</button>
           </section>
         </nav>
       ) : (

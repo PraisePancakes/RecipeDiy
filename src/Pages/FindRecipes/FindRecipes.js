@@ -328,7 +328,7 @@ const FindRecipes = ({ user }) => {
                       >
                         {post.author?.profileImgURL ? (
                           <img
-                            src={`http://localhost:3001/User_Mult_Images/${post.author?.profileImgURL}`}
+                            src={`https://recipediy.onrender.com/User_Mult_Images/${post.author?.profileImgURL}`}
                             className="border rounded-full w-[6rem] h-[6rem] object-cover"
                             alt="Profile"
                           />
@@ -370,7 +370,7 @@ const FindRecipes = ({ user }) => {
                           {post?.difficulty}{" "}
                         </h1>
                         <img
-                          src={`http://localhost:3001/Post_Mult_Images/${post?.postImageURL}`}
+                          src={`https://recipediy.onrender.com/Post_Mult_Images/${post?.postImageURL}`}
                           className="w-[20rem] h-[20rem] rounded-md object-cover"
                           alt="Post"
                         />
