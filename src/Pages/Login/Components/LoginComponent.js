@@ -23,8 +23,6 @@ const LoginComponent = () => {
 
       setForm(DEFAULT_FORM);
       setError("");
-
-      window.location.reload();
     } catch (error) {
       setError(error.response.data.message);
     }
